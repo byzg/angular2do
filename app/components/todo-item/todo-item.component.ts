@@ -1,13 +1,14 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Todo } from './todo'
+import { Todo } from '../../shared/todo.model'
+import {TodoService} from "../../shared/todo.service";
 
 @Component({
   selector: 'todo-item',
-  templateUrl: './app/components/todo-item.component.html',
-  styleUrls: ['./app/components/todo-item.component.css']
+  templateUrl: './app/components/todo-item/todo-item.component.html',
+  styleUrls: ['./app/components/todo-item/todo-item.component.css']
 })
 
-export class TodoItemComponent {
+export class TodoItem {
   @Input() todo: Todo;
   @Output() deleted = new EventEmitter();
 
